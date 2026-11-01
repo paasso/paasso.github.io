@@ -33,10 +33,10 @@
 <p>«Весёлая коробка» — набор простых игр для детей 2–6 лет. В приложении нет регистрации, чатов, ссылок на внешние сайты и сбора персональных данных ребёнка (имени, фото, голоса, контактов). Разработчик не имеет собственных серверов и не получает данных от пользователей напрямую.</p>
 <p>Приложение распространяется в двух версиях, они обрабатывают данные по-разному.</p>
 <h2>1. Данные на устройстве (обе версии)</h2>
-<p>Прогресс игр (звёзды, наклейки, рисунки, настройки звука и языка, отметка о покупке «Без рекламы») хранится только локально на устройстве и никуда не передаётся. Озвучка заданий выполняется системным синтезатором речи Android на устройстве. Приложение не использует микрофон, камеру, контакты и местоположение.</p>
-<h2>2. Версия Google Play (бесплатная, с рекламой и покупкой «Без рекламы»)</h2>
-<p>В версию для Google Play встроены только сервисы Google: Google Mobile Ads SDK (AdMob) и Google Play Billing. Сервисов Яндекса, аналитики и других сторонних SDK в ней нет. Данные передаются в зашифрованном виде (HTTPS/TLS) и обрабатываются Google по его правилам.</p>
-<h3>2.1. Google Mobile Ads SDK / AdMob (реклама)</h3>
+<p>Прогресс игр (звёзды, наклейки, рисунки, настройки звука и языка, отметка о покупке «Без рекламы» в версии RuStore) хранится только локально на устройстве и никуда не передаётся. Озвучка заданий выполняется системным синтезатором речи Android на устройстве. Приложение не использует микрофон, камеру, контакты и местоположение.</p>
+<h2>2. Версия Google Play (бесплатная, с рекламой)</h2>
+<p>В версию для Google Play встроен только один сторонний сервис — Google Mobile Ads SDK (AdMob). Встроенных покупок, сервисов Яндекса, аналитики и других сторонних SDK в ней нет. Данные передаются в зашифрованном виде (HTTPS/TLS) и обрабатываются Google по его правилам.</p>
+<h3>Google Mobile Ads SDK / AdMob (реклама)</h3>
 <p>Реклама показывается только при возврате из игры в меню (не чаще раза в 3 минуты и никогда во время игры), а видеоролик за бонусную наклейку — только из «Уголка родителей» за родительским замком. Используется SDK, сертифицированный Google для программы «Приложения для всей семьи» (Families Self-Certified Ads SDK). Все запросы рекламы помечаются как <strong>адресованные детям</strong> (tag for child-directed treatment, age-restricted treatment «child»), максимальный рейтинг объявлений — <strong>G</strong> (для всех возрастов), персонализация <strong>отключена</strong>: показывается только неперсонализированная реклама, без ремаркетинга и рекламы на основе интересов. Разрешение на рекламный идентификатор Google (AD_ID) из приложения удалено, а при пометке «для детей» SDK не передаёт рекламный идентификатор. Согласно <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">раскрытию данных Google</a>, SDK может обрабатывать:
 - IP-адрес и определяемое по нему приблизительное местоположение (точная геолокация не собирается);
 - данные о взаимодействии с рекламой: запуск приложения, показы, нажатия, просмотры видео;
@@ -44,8 +44,6 @@
 - идентификаторы устройства: идентификатор набора приложений (App Set ID) и внутренние идентификаторы SDK — для ограничения частоты показов, аналитики показов и защиты от мошенничества;
 - технические сведения об устройстве и приложении (модель, версия ОС, язык, экран, версия приложения).</p>
 <p>Эти данные используются для показа рекламы, статистики показов и защиты от мошенничества. Подробнее: <a href="https://policies.google.com/privacy">Политика конфиденциальности Google</a>, <a href="https://policies.google.com/technologies/partner-sites">Как Google использует данные из приложений партнёров</a>.</p>
-<h3>2.2. Google Play Billing (покупка «Без рекламы»)</h3>
-<p>Покупка доступна только взрослому в «Уголке родителей» и проводится Google Play по правилам Google. Разработчик получает только факт покупки товара <code>no_ads</code> (и служебный токен покупки для её подтверждения); платёжные данные разработчику не передаются. Покупка автоматически восстанавливается при новом запуске или на новом устройстве с тем же аккаунтом Google.</p>
 <h2>3. Версия RuStore (бесплатная, с рекламой и покупкой «Без рекламы»)</h2>
 <p>В версию для RuStore встроены сервисы ООО «Яндекс» и RuStore (VK). Данные передаются в зашифрованном виде (HTTPS) и обрабатываются этими компаниями по их правилам.</p>
 <h3>3.1. Yandex Mobile Ads SDK (реклама)</h3>
@@ -65,7 +63,7 @@
 <h3>3.3. RuStore Pay SDK (покупка «Без рекламы»)</h3>
 <p>Покупка доступна только взрослому в «Уголке родителей» и проводится через приложение RuStore по правилам RuStore (VK). Разработчик получает только факт покупки товара <code>no_ads</code>; платёжные данные разработчику не передаются. Для проверки покупки SDK может использовать идентификатор установки RuStore.</p>
 <h2>4. Дети</h2>
-<p>Приложение предназначено для детей дошкольного возраста и их родителей. Разработчик сознательно не собирает персональные данные детей. Все кнопки покупок, бонусного видео и настроек скрыты за родительским замком. Если вы считаете, что данные ребёнка были переданы по ошибке, напишите нам — мы примем меры.</p>
+<p>Приложение предназначено для детей дошкольного возраста и их родителей. Разработчик сознательно не собирает персональные данные детей. Все кнопки покупок (в версии RuStore), бонусного видео и настроек скрыты за родительским замком. Если вы считаете, что данные ребёнка были переданы по ошибке, напишите нам — мы примем меры.</p>
 <h2>5. Удаление данных</h2>
 <p>Удалите приложение или очистите его данные: Настройки → Приложения → «Весёлая коробка» → Хранилище → Очистить данные. Чтобы удалить статистику AppMetrica (версия RuStore), относящуюся к вашему устройству, напишите на e-mail ниже — мы направим запрос в Яндекс. Данными, которые обрабатывает Google (версия Google Play), можно управлять в <a href="https://myaccount.google.com/data-and-privacy">аккаунте Google</a>.</p>
 <h2>6. Изменения</h2>
@@ -84,10 +82,10 @@ Developer: Pavel Vikhrov · e-mail: <a href="mailto:chinpokomon373@gmail.com">ch
 <p>Happy Box is a set of simple games for children aged 2–6. It has no sign-up, no chat, no links to external websites and does not collect a child's personal data (name, photos, voice, contacts). The developer has no servers of its own and does not receive any data from users directly.</p>
 <p>The app is distributed in two versions that handle data differently.</p>
 <h2>1. Data on the device (both versions)</h2>
-<p>Game progress (stars, stickers, drawings, sound and language settings, the "No ads" purchase flag) is stored only locally on the device and is never transmitted. Spoken prompts use the Android system text-to-speech engine on the device. The app does not use the microphone, camera, contacts or location.</p>
-<h2>2. Google Play version (free, with ads and a "No ads" purchase)</h2>
-<p>The Google Play version includes only Google services: the Google Mobile Ads SDK (AdMob) and Google Play Billing. It contains no Yandex services, no analytics and no other third-party SDKs. Data is transmitted encrypted (HTTPS/TLS) and processed by Google under its own policies.</p>
-<h3>2.1. Google Mobile Ads SDK / AdMob (advertising)</h3>
+<p>Game progress (stars, stickers, drawings, sound and language settings, the "No ads" purchase flag in the RuStore version) is stored only locally on the device and is never transmitted. Spoken prompts use the Android system text-to-speech engine on the device. The app does not use the microphone, camera, contacts or location.</p>
+<h2>2. Google Play version (free, with ads)</h2>
+<p>The Google Play version includes a single third-party service: the Google Mobile Ads SDK (AdMob). It contains no in-app purchases, no Yandex services, no analytics and no other third-party SDKs. Data is transmitted encrypted (HTTPS/TLS) and processed by Google under its own policies.</p>
+<h3>Google Mobile Ads SDK / AdMob (advertising)</h3>
 <p>An ad is shown only when returning from a game to the menu (at most once every 3 minutes and never during play); the bonus-sticker video is available only from the Parents' corner behind a parental gate. The SDK is on Google Play's Families Self-Certified Ads SDK list. Every ad request is tagged as <strong>child-directed</strong> (tag for child-directed treatment, age-restricted treatment "child"), the maximum ad content rating is <strong>G</strong> (general audiences), and personalization is <strong>disabled</strong>: only non-personalized ads are served, with no remarketing or interest-based advertising. The Google Advertising ID permission (AD_ID) is removed from the app, and child-directed requests do not transmit the advertising ID. According to <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google's data disclosure</a>, the SDK may process:
 - IP address and the approximate location derived from it (precise location is not collected);
 - ad interaction data: app launches, ad impressions, taps and video views;
@@ -95,8 +93,6 @@ Developer: Pavel Vikhrov · e-mail: <a href="mailto:chinpokomon373@gmail.com">ch
 - device identifiers: the App Set ID and internal SDK identifiers, used for frequency capping, ad measurement and fraud prevention;
 - technical device and app information (model, OS version, language, screen, app version).</p>
 <p>This data is used to serve ads, measure ad delivery and prevent fraud. Learn more: <a href="https://policies.google.com/privacy">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
-<h3>2.2. Google Play Billing ("No ads" purchase)</h3>
-<p>The purchase is available only to an adult in the Parents' corner and is processed by Google Play under Google's terms. The developer only learns that the <code>no_ads</code> product was purchased (plus a technical purchase token used to acknowledge it); no payment details are shared with the developer. The purchase is restored automatically on the next launch or on a new device signed in to the same Google account.</p>
 <h2>3. RuStore version (free, with ads and a "No ads" purchase)</h2>
 <p>The RuStore version includes services by Yandex LLC and RuStore (VK). Data is transmitted encrypted (HTTPS) and processed by these companies under their own policies.</p>
 <h3>3.1. Yandex Mobile Ads SDK (advertising)</h3>
@@ -116,7 +112,7 @@ Developer: Pavel Vikhrov · e-mail: <a href="mailto:chinpokomon373@gmail.com">ch
 <h3>3.3. RuStore Pay SDK ("No ads" purchase)</h3>
 <p>The purchase is available only to an adult in the Parents' corner and is processed by the RuStore app under RuStore (VK) terms. The developer only learns that the <code>no_ads</code> product was purchased; no payment details are shared with the developer. The SDK may use a RuStore installation identifier to verify the purchase.</p>
 <h2>4. Children</h2>
-<p>The app is designed for preschool children and their parents. The developer does not knowingly collect personal data from children. All purchase, bonus-video and settings buttons are behind a parental gate. If you believe a child's data was shared by mistake, contact us and we will take action.</p>
+<p>The app is designed for preschool children and their parents. The developer does not knowingly collect personal data from children. All purchase (RuStore version), bonus-video and settings buttons are behind a parental gate. If you believe a child's data was shared by mistake, contact us and we will take action.</p>
 <h2>5. Data deletion</h2>
 <p>Uninstall the app or clear its data: Settings → Apps → Happy Box → Storage → Clear data. To request deletion of AppMetrica statistics related to your device (RuStore version), email us and we will forward the request to Yandex. Data processed by Google (Google Play version) can be managed in your <a href="https://myaccount.google.com/data-and-privacy">Google Account</a>.</p>
 <h2>6. Changes</h2>
